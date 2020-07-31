@@ -1,56 +1,238 @@
-/* CSS files add styling rules to your content */
+/* 
 
-body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
-  background: url("https://i.pinimg.com/originals/f3/98/9e/f3989e431422a23123fc19fcc43f8d2e.jpg");
-  background-size: cover;
+This CSS file is contains the CSS rule sets for 
+    - index.html
+    - any universal elements that all pages use
+
+The CSS for the take-action.html is in take-action.css
+
+*/
+
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+
+/* TODO: Customize your font properties and background color for all elements inside the <body> and <html> tags */
+body,
+html {
+  height: 100%;
+  font-size: 20px; /* Change the font size*/
+  line-height: 1.5em; /* Change the line height size*/
+  margin: 0em;
+  color: white; /* Change the font color*/
+  background-color:#DAF7A6; /* Change the background color */
+  box-sizing: border-box;
+  font-family:'Crimson Text', serif;
 }
 
 h1 {
-  font-style: bold;
-  font-size: 46px;
+  letter-spacing: 5px;
+  font-size: 50px;
+  /*TODO: Change the font-family property to your linked font*/
+  color: #43d6b9ff;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  border-radius: 10px;
-  background-color: #8b6f47;
-  color: black;
+  font-family:'Crimson Text', serif;
 }
 
+/*TODO: Change the font-family property to your linked font*/
 h2 {
-  margin-top: 2em;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 35px;
-  border-radius: 10px;
-  background-color: white;
-  color: black;
-  width: 1000px;
-  height: 45px;
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: #A4D61D;
+  text-align: center;
+  line-height: 1.3em;
+  font-family:'Crimson Text', serif;
 }
 
-button {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-  font-style: bold;
-  border-radius: 16px;
-  background-color: #d6cbd3;
-  color: black;
-  margin: 1em;
-  width: 255px;
-  height: 45px;
-  padding-left: 50px;
-  padding-right: 50px;
+/*TODO: Change the color of a link when a person hovers over it*/
+p a {
+  color: white;
+  text-decoration: none;
 }
 
-.question {
-  display: flex;
-  margin-top: 2em;
+/************************************************/
+/*************** CSS FOR NAV BAR ****************/
+/************************************************/
+
+/* All of these TODOs are optional. You should change the styling based on your mockup */
+
+/* TODO (optional): Change the background color and/or border style */
+
+ul.nav-bar {
+  /* Styling for the <ul class="nav-bar"> element */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:;
+  border-style: solid;
+  border-color: #B5EB23;
 }
 
-.answer-choice img {
-  height: 10em;
-  width: 15em;
-  margin: 1em;
-  border-radius: 10px;
-  border: 2px solid black;
+/* TODO (optional): Change the font size*/
+
+li.nav {
+  /* Styling for the <li class="nav"> element */
+  float: right;
+  font-size: 15px;
+  font-style: italic;
+  font-family:'Crimson Text', serif;
 }
+
+/* TODO (optional): Change the font color, decoration, and/or case */
+
+li.nav a {
+  /* Styling for the <a> elements in <li class="nav"> */
+  display: block;
+  color: #0D38D3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  font-family:'Crimson Text', serif;
+  float: right;
+  font-size: 15px;
+}
+
+/* TODO (optional): Change the background color and/or font color when the mouse hovers over an item */
+
+li.nav a:hover {
+  /* Styling for the <a> elements when the mouse is hovering in <li class="nav"> */
+  background-color: #0D38D3;
+  color: #43d6b9ff;
+}
+
+/************************************************/
+/*********** CSS FOR FLEXBOX HEADING ************/
+/************************************************/
+
+/* TODO: Review the CSS properties to the flexbox container for title and intro text */
+.flex-container {
+  display: flex; /* Set the flexbox display */
+  flex-direction: row; /* Configure the flex items to row */
+  flex-wrap: nowrap; /* Don’t wrap the flex items */
+  justify-content: center; /* Justify the flex items to the center */
+  align-items: center; /* Align the flex items to the center */
+
+  /* Design properties */
+  background-color: green;
+  padding: 2px;
+
+  /* Positioning properties */
+  position: absolute;
+  left: 20%;
+  right: 1%;
+  top: 40%; /* Change this value to move the box up or down */
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the heading (the left box) */
+.heading-home {
+  padding: 2%;
+  color: #DAF7A6;
+  font-size: 50px;
+  letter-spacing: 10px;
+  line-height: 60px;
+  text-align: center;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+.intro-img {
+  width: 100;
+}
+
+/* TODO: Review the CSS properties to the flex item for the intro text (the right box) */
+.intro-text {
+  background-color: #DAF7A6; /* Add your own background color */
+  padding: 4%;
+  margin: 3%;
+  color: #0D38D3; /* Add the color of your font */
+  font-size: 20px; /* Add your font size*/
+  letter-spacing: 2px; /* Adds space between letters */
+  line-height: 1.4em; /* Adds space between lines */
+  text-align: center;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/************************************************/
+/*************** PARALLAX SCROLL ****************/
+/************************************************/
+
+/*-----------TEXT SECTIONS-----------*/
+
+/* TODO (optional): Change the background color and/or text alignment */
+
+.text-section {
+  background-color: #DAF7A6;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+  color: white;
+}
+
+/*---------IMAGE STYLING + PARALLAX PROPERTY---------*/
+
+/* TODO: Add the CSS selector for each image to the collective image rule set */
+
+.main-message,
+.image-one,
+.image-two,
+.image-three {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #A4D61D;
+  background-size: cover;
+  min-height: 100%; /* This adjusts the height of the image */
+
+  /* TODO: Add the property to create the parallax scrolling effect here */
+  background-attachment: fixed;
+}
+
+/* TODO: Replace the current image URL with your own. This is the top image on your homepage. */
+.main-message {
+  background-image: url("https://images.unsplash.com/photo-1595946391500-f012beeabace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+
+/* TODO: Replace the current image URL with your own */
+.image-one {
+  background-image: url("https://images.unsplash.com/photo-1516937941344-00b4e0337589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80");
+}
+.image-two {
+  background-image: url("https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+.image-three {
+  background-image: url("https://images.unsplash.com/flagged/photo-1576045771676-7ac070c1ce72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
+}
+/* TODO: Add a second background image. Make sure you add this class selector to the collective image rule set above */
+
+/* TODO: Add more background images by repeating the process above */
+
+/*-----------IMAGE ATTRIBUTIONS (if required)-----------*/
+.attributions {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/******************************************************/
+/***** CHANGE INDEX.HTML CSS BASED ON SCREEN SIZE *****/
+/******************************************************/
+
+/* TODO: Add a breakpoint if the screen is 700px or less */
+@media screen and (max-width: 700px) {
+  
+  .flex-container {
+    flex-wrap: wrap;
+    top: 20%;
+  }
+}
+/* TODO: Add additional breakpoints based on your website's design
